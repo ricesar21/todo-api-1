@@ -6,6 +6,10 @@ const { Tarefa } = require('./models');
 
 app.use(bodyParser.json());
 
+app.get('/', async(req, res)=>{
+    res.send('Running =)');
+})
+
 app.get('/tarefas', async(req,res)=>{
     const tarefas = await Tarefa.findAll();
     res.status(200).json(tarefas);

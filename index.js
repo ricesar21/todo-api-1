@@ -3,10 +3,13 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser'); // interpretação do json
 const { Tarefa } = require('./models');
+const cors = require('cors');
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.get('/', async(req, res)=>{
+    console.log('Running')
     res.send('Running =)');
 })
 

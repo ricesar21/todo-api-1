@@ -6,7 +6,7 @@ const { Tarefa } = require('./models');
 const cors = require('cors');
 
 app.use(bodyParser.json());
-app.use(cors());
+//app.use(cors());
 
 app.get('/', async(req, res)=>{
     console.log('Running')

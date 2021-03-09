@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 3000
-const bodyParser = require('body-parser')
+const port = 3000;
+const bodyParser = require('body-parser');
 const { Tarefa } = require('./models');
 
 app.use(bodyParser.json());
@@ -65,5 +65,6 @@ app.get('/tarefas/prioridade/:prioridade', async (req, res) => {
     });
     res.status(200).json(tarefas);
 });
+
 
 app.listen(process.env.PORT || port);
